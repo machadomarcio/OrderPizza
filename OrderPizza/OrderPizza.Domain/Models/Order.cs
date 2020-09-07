@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Linq;
 using System.Text;
 
 namespace OrderPizza.Domain.Models
@@ -20,7 +21,16 @@ namespace OrderPizza.Domain.Models
 
         public virtual List<Pizza> Pizzas { get; set; }
 
-        public decimal TotalValue { get; set; }
+        private decimal _totalValue;  // Backing store
+
+        public decimal TotalValue
+        {
+            get => _totalValue;
+            set
+            {
+                _totalValue = Pizzas.Sum(x => x.Value);
+            }
+        }
 
         public DateTime OrderDate { get; set; }
 

@@ -39,7 +39,11 @@ namespace OrderPizza.Data.Repositories
         {
             IQueryable<Customer> query = _context.Customers;
 
-            query = query.Include(c => c.Address);
+            query = query.Include(c => c.Address)
+                         .Include(x=> x.Orders)
+                         .ThenInclude(p => p.Pizzas)
+                         .ThenInclude(f => f.PizzaFlavors)
+                         .ThenInclude(f=> f.Flavor);
 
             query = query.AsNoTracking().OrderBy(c => c.Id);
 

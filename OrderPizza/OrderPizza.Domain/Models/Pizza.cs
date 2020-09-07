@@ -18,6 +18,18 @@ namespace OrderPizza.Domain.Models
 
         public virtual Order Order { get; set; }
 
-        public decimal Value { get; set; }
+        private decimal _value;  // Backing store
+
+        public decimal Value
+        {
+            get => _value;
+            set
+            {
+                foreach (var pizzaFlavor in PizzaFlavors)
+                {
+                    _value += pizzaFlavor.Flavor.Value / PizzaFlavors.Count;
+                }
+            }
+        }
     }
 }
