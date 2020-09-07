@@ -23,6 +23,7 @@ namespace OrderPizza.Data.Contexts
 
         public DbSet<PizzaFlavor> PizzaFlavors { get; set; }
 
+
         protected override void OnModelCreating(ModelBuilder builder)
         {
             builder.Entity<Order>()

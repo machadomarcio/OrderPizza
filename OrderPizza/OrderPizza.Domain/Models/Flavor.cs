@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace OrderPizza.Domain.Models
 {
@@ -17,6 +15,7 @@ namespace OrderPizza.Domain.Models
 
         public decimal Value { get; set; }
 
-        public List<PizzaFlavor> PizzaFlavors { get; set; }
+        public virtual List<PizzaFlavor> PizzaFlavors { get; set; }
+
     }
 }

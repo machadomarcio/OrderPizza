@@ -89,5 +89,36 @@ namespace OrderPizza.Data.Repositories
 
             return query.FirstOrDefault();
         }
+
+        public List<Order> GetAllOrders()
+        {
+            IQueryable<Order> query = _context.Orders;
+
+            query = query.Include(c => c.Customer)
+                         .ThenInclude(ad => ad.Address)
+                         .Include(c => c.Pizzas)
+                         .ThenInclude(p => p.PizzaFlavors)
+                         .ThenInclude(f=> f.Flavor);
+
+            query = query.AsNoTracking().OrderBy(c => c.Id);
+
+            return query.ToList();
+        }
+
+        public Order GetOrderById(int id)
+        {
+            IQueryable<Order> query = _context.Orders;
+
+            query = query
+                .Include(c => c.Customer)
+                .ThenInclude(ad => ad.Address)
+                .Include(c => c.Pizzas)
+                .ThenInclude(p => p.PizzaFlavors)
+                .ThenInclude(f => f.Flavor);
+
+            query = query.AsNoTracking().OrderBy(c => c.Id).Where(x => x.Id == id);
+
+            return query.FirstOrDefault();
+        }
     }
 }

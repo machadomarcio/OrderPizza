@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 using OrderPizza.Domain.Models;
 
 namespace OrderPizza.Data.Repositories
@@ -24,5 +22,9 @@ namespace OrderPizza.Data.Repositories
         List<Flavor> GetAllFlavors();
 
         Flavor GetFlavorById(int id);
+
+        List<Order> GetAllOrders();
+
+        Order GetOrderById(int id);
     }
 }

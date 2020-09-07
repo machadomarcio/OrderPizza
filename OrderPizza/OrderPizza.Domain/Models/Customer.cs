@@ -6,7 +6,7 @@ namespace OrderPizza.Domain.Models
     {
         public Customer()
         {
-                Orders = new List<Order>();
+            Orders = new List<Order>();
         }
 
         public int Id { get; set; }
@@ -21,6 +21,6 @@ namespace OrderPizza.Domain.Models
 
         public virtual Address Address { get; set; }
 
-        public List<Order> Orders { get; set; }
+        public virtual List<Order> Orders { get; set; }
     }
 }

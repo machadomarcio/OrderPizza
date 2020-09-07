@@ -12,11 +12,11 @@ namespace OrderPizza.Domain.Models
         }
         public int Id { get; set; }
 
-        public List<PizzaFlavor> PizzaFlavors { get; set; }
+        public virtual List<PizzaFlavor> PizzaFlavors { get; set; }
 
         public int Orderid { get; set; }
 
-        public Order Order { get; set; }
+        public virtual Order Order { get; set; }
 
         public decimal Value { get; set; }
     }

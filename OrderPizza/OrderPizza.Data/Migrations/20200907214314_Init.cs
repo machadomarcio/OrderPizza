@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace OrderPizza.Data.Migrations
 {
@@ -67,7 +68,9 @@ namespace OrderPizza.Data.Migrations
                     Id = table.Column<int>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     CustomerId = table.Column<int>(nullable: false),
-                    TotalValue = table.Column<decimal>(nullable: false)
+                    TotalValue = table.Column<decimal>(nullable: false),
+                    OrderDate = table.Column<DateTime>(nullable: false),
+                    Status = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
