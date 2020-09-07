@@ -1,11 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace OrderPizza.Domain.Models
 {
     public class Customer
     {
+        public Customer()
+        {
+                Orders = new List<Order>();
+        }
+
         public int Id { get; set; }
 
         public string Cpf { get; set; }

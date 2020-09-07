@@ -20,5 +20,9 @@ namespace OrderPizza.Data.Repositories
         Customer GetCustomerById(int id);
 
         Customer GetCustomerByCpf(string cpf);
+
+        List<Flavor> GetAllFlavors();
+
+        Flavor GetFlavorById(int id);
     }
 }

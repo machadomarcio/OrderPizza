@@ -15,7 +15,7 @@ namespace OrderPizza.Data.Contexts
 
         public DbSet<Address> Addresses { get; set; }
 
-        public DbSet<Flavor> Flavours { get; set; }
+        public DbSet<Flavor> Flavors { get; set; }
 
         public DbSet<Order> Orders { get; set; }
 

@@ -2,13 +2,14 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
+using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using OrderPizza.Data.Contexts;
 
 namespace OrderPizza.Data.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20200907180746_init")]
-    partial class init
+    [Migration("20200907203418_Init")]
+    partial class Init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -85,7 +86,7 @@ namespace OrderPizza.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Flavours");
+                    b.ToTable("Flavors");
                 });
 
             modelBuilder.Entity("OrderPizza.Domain.Models.Order", b =>

@@ -2,7 +2,7 @@
 
 namespace OrderPizza.Data.Migrations
 {
-    public partial class init : Migration
+    public partial class Init : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -23,7 +23,7 @@ namespace OrderPizza.Data.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Flavours",
+                name: "Flavors",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
@@ -33,7 +33,7 @@ namespace OrderPizza.Data.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Flavours", x => x.Id);
+                    table.PrimaryKey("PK_Flavors", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -111,9 +111,9 @@ namespace OrderPizza.Data.Migrations
                 {
                     table.PrimaryKey("PK_PizzaFlavors", x => new { x.PizzaId, x.FlavorId });
                     table.ForeignKey(
-                        name: "FK_PizzaFlavors_Flavours_FlavorId",
+                        name: "FK_PizzaFlavors_Flavors_FlavorId",
                         column: x => x.FlavorId,
-                        principalTable: "Flavours",
+                        principalTable: "Flavors",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
@@ -155,7 +155,7 @@ namespace OrderPizza.Data.Migrations
                 name: "PizzaFlavors");
 
             migrationBuilder.DropTable(
-                name: "Flavours");
+                name: "Flavors");
 
             migrationBuilder.DropTable(
                 name: "Pizzas");
