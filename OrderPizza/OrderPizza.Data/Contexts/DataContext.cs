@@ -4,7 +4,7 @@ using System.Text;
 using Microsoft.EntityFrameworkCore;
 using OrderPizza.Domain.Models;
 
-namespace OrderPizza.Data.Context
+namespace OrderPizza.Data.Contexts
 {
     public class DataContext : DbContext
     {

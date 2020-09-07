@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using OrderPizza.Data.Context;
+﻿using Microsoft.AspNetCore.Mvc;
+using OrderPizza.Data.Repositories;
 using OrderPizza.Domain.Models;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -15,25 +10,25 @@ namespace OrderPizza.API.Controllers
     [ApiController]
     public class CustomerController : ControllerBase
     {
-        private DataContext context;
+        private readonly IRepository _repository;
 
-        public CustomerController(DataContext context)
+        public CustomerController(IRepository repository)
         {
-            this.context = context;
+            _repository = repository;
         }
 
         // GET: api/<CustomerController>
         [HttpGet]
         public IActionResult Get()
         {
-            return Ok(context.Customers.AsNoTracking());
+            return Ok(_repository.GetAllCustomers());
         }
 
         // GET api/<CustomerController>/5
         [HttpGet("byId/{id}")]
         public IActionResult GetById(int id)
         {
-            var customer = context.Customers.AsNoTracking().FirstOrDefault(a => a.Id == id);
+            var customer = _repository.GetCustomerById(id);
 
             if (customer == null)
                 return BadRequest("Cliente não encontrado!");
@@ -44,7 +39,7 @@ namespace OrderPizza.API.Controllers
         [HttpGet("byCpf/{cpf}")]
         public IActionResult GetByCpf(string cpf)
         {
-            var customer = context.Customers.AsNoTracking().FirstOrDefault(a => a.Cpf == cpf);
+            var customer = _repository.GetCustomerByCpf(cpf);
 
             if (customer == null)
                 return BadRequest("Cliente não encontrado!");
@@ -55,38 +50,47 @@ namespace OrderPizza.API.Controllers
         [HttpPost]
         public IActionResult Post(Customer customer)
         {
-            context.Add(customer);
-            context.SaveChanges();
-            return Ok(customer);
+            _repository.Add(customer);
+
+            if (_repository.SaveChanges())
+                return Ok(customer);
+
+            return BadRequest("Não foi possível cadastrar o cliente");
         }
 
         // PUT api/<CustomerController>/5
         [HttpPut("{id}")]
         public IActionResult Put(int id, Customer customer)
         {
-            var customerRegistered = context.Customers.AsNoTracking().FirstOrDefault(a => a.Id == id);
+            var customerRegistered = _repository.GetCustomerById(id);
 
             if (customerRegistered == null)
                 return BadRequest("Cliente não encontrado!");
 
-            customer.Id = id;
-            context.Update(customer);
-            context.SaveChanges();
-            return Ok(customer);
+            customer.Id = customerRegistered.Id;
+            _repository.Update(customer);
+
+            if (_repository.SaveChanges())
+                return Ok(customer);
+
+            return BadRequest("Não foi possível editar o cliente");
         }
 
         // DELETE api/<CustomerController>/5
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
-            var customer = context.Customers.FirstOrDefault(a => a.Id == id);
+            var customer = _repository.GetCustomerById(id);
 
             if (customer == null)
                 return BadRequest("Cliente não encontrado!");
+            
+            _repository.Delete(customer);
 
-            context.Remove(customer);
-            context.SaveChanges();
-            return Ok();
+            if (_repository.SaveChanges())
+                return Ok();
+
+            return BadRequest("Não foi possível  excluir o cliente");
         }
     }
 }

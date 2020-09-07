@@ -8,8 +8,8 @@ C:\Projects\OrderPizza\OrderPizza\OrderPizza.Data\bin\Debug\netcoreapp3.1\OrderP
 C:\Projects\OrderPizza\OrderPizza\OrderPizza.Data\obj\Debug\netcoreapp3.1\OrderPizza.Data.csprojAssemblyReference.cache
 C:\Projects\OrderPizza\OrderPizza\OrderPizza.Data\obj\Debug\netcoreapp3.1\OrderPizza.Data.AssemblyInfoInputs.cache
 C:\Projects\OrderPizza\OrderPizza\OrderPizza.Data\obj\Debug\netcoreapp3.1\OrderPizza.Data.AssemblyInfo.cs
+C:\Projects\OrderPizza\OrderPizza\OrderPizza.Data\obj\Debug\netcoreapp3.1\OrderPizza.Data.csproj.CoreCompileInputs.cache
 C:\Projects\OrderPizza\OrderPizza\OrderPizza.Data\obj\Debug\netcoreapp3.1\OrderPizza.Data.csproj.CopyComplete
 C:\Projects\OrderPizza\OrderPizza\OrderPizza.Data\obj\Debug\netcoreapp3.1\OrderPizza.Data.dll
 C:\Projects\OrderPizza\OrderPizza\OrderPizza.Data\obj\Debug\netcoreapp3.1\OrderPizza.Data.pdb
 C:\Projects\OrderPizza\OrderPizza\OrderPizza.Data\obj\Debug\netcoreapp3.1\OrderPizza.Data.genruntimeconfig.cache
-C:\Projects\OrderPizza\OrderPizza\OrderPizza.Data\obj\Debug\netcoreapp3.1\OrderPizza.Data.csproj.CoreCompileInputs.cache

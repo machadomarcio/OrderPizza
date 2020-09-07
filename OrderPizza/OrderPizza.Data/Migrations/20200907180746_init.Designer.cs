@@ -2,8 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
-using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using OrderPizza.Data.Context;
+using OrderPizza.Data.Contexts;
 
 namespace OrderPizza.Data.Migrations
 {
