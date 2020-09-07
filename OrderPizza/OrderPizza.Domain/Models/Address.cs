@@ -4,7 +4,7 @@ using System.Text;
 
 namespace OrderPizza.Domain.Models
 {
-    class Address
+    public class Address
     {
 
         public int Id { get; set; }
@@ -17,6 +17,10 @@ namespace OrderPizza.Domain.Models
 
         public string City { get; set; }
 
-        public String State { get; set; }
+        public string State { get; set; }
+        
+        public int CustomerId { get; set; }
+
+        public virtual Customer Customer { get; set; }  
     }
 }
