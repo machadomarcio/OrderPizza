@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using FluentValidation;
+using FluentValidation.Results;
 
 namespace OrderPizza.Domain.Models
 {
@@ -32,9 +33,19 @@ namespace OrderPizza.Domain.Models
             foreach (var pizza in Pizzas)
             {
                 pizza.Value = pizza.PizzaFlavors.Sum(x => x.Flavor.Value) / pizza.PizzaFlavors.Count;
+
+                pizza.Value = decimal.Round(pizza.Value, 2, MidpointRounding.ToZero);
             }
 
             TotalValue = Pizzas.Sum(x => x.Value);
+
+            TotalValue = decimal.Round(TotalValue, 2, MidpointRounding.ToZero);
+        }
+
+        public ValidationResult Validate()
+        {
+            var validator = new OrderValidator();
+            return validator.Validate(this);
         }
     }
 
@@ -42,6 +53,21 @@ namespace OrderPizza.Domain.Models
     {
         public OrderValidator()
         {
+            When(x => x.CustomerId == null, () =>
+            {
+                RuleFor(x => x.Customer).NotNull().WithMessage("Deve ser informar os dados do solicitante.");
+            });
+
+            When(x => x.CustomerId == null && x.Customer != null, () =>
+            {
+                RuleFor(x => x.Customer.Address).NotNull().WithMessage("Deve ser informado o endereço de entrega.");
+            });
+
+            When(x => x.CustomerId == null && x.Customer?.Address != null, () =>
+            {
+                RuleFor(x => x.Customer.Address).NotNull().SetValidator(new AddressValidator());
+            });
+
             RuleFor(x => x.Pizzas).NotNull().WithMessage("Deve ser informado pelo menos uma(1) pizza.");
             RuleFor(x => x.Pizzas).Must(x => x.Any()).WithMessage("Deve ser informado pelo menos uma(1) pizza.");
             RuleFor(x => x.Pizzas).Must(x => x.Count < 11)
@@ -54,7 +80,7 @@ namespace OrderPizza.Domain.Models
                 pizza.RuleFor(x => x.PizzaFlavors).Must(x => x.Any())
                     .WithMessage("Deve ser informado pelo menos um(1) sabor para a pizza.");
                 pizza.RuleFor(x => x.PizzaFlavors).Must(x => x.Count < 3)
-                    .WithMessage("Cada pizza pode ter até dois(2) sabores.");
+                    .WithMessage("Cada pizza pode ter no máximo dois(2) sabores.");
             });
 
         }

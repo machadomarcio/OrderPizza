@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using OrderPizza.Data.Repositories;
@@ -51,12 +52,10 @@ namespace OrderPizza.API.Controllers
                 order.CustomerId = order.Customer.Id;
             }
 
-            var validator = new OrderValidator();
-
-            var validRes = validator.Validate(order);
+            var validRes = order.Validate();
             if (!validRes.IsValid)
             {
-                return BadRequest($"Não foi possível cadastrar o pedido. Erro: {validRes.Errors.FirstOrDefault()}");
+                return BadRequest($"Não foi possível cadastrar o pedido. Erro: {string.Join(",", validRes.Errors)}");
             }
 
             order.CalculateOrder();
