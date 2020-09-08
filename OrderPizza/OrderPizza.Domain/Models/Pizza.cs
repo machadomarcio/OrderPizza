@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using FluentValidation;
 
 namespace OrderPizza.Domain.Models
 {
@@ -18,18 +20,7 @@ namespace OrderPizza.Domain.Models
 
         public virtual Order Order { get; set; }
 
-        private decimal _value;  // Backing store
-
-        public decimal Value
-        {
-            get => _value;
-            set
-            {
-                foreach (var pizzaFlavor in PizzaFlavors)
-                {
-                    _value += pizzaFlavor.Flavor.Value / PizzaFlavors.Count;
-                }
-            }
-        }
+        public decimal Value { get; set; }
+        
     }
 }

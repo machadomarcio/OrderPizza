@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "UED0pa2UXC3jAjMzJly+LIyXLBPQUGw+DsTfEx15ae7I0+sZXvI00Aj7wg/2JHOakd7FxOs2uClskYiGLp+XeQ==",
+  "dgSpecHash": "w5JmGfJDVPIX8lY/JmDaxOUNFFimksMCxEX76zceWoc2Oqay2zaZABvf8zkiVVeIoKlKYLpqbNTwq4oISZoO0Q==",
   "success": true,
   "projectFilePath": "C:\\Projects\\OrderPizza\\OrderPizza\\OrderPizza.Data\\OrderPizza.Data.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\marci\\.nuget\\packages\\fluentvalidation\\9.2.0\\fluentvalidation.9.2.0.nupkg.sha512",
     "C:\\Users\\marci\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\marci\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",
     "C:\\Users\\marci\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

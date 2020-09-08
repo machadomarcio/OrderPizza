@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace OrderPizza.Domain.Models
+﻿namespace OrderPizza.Domain.Models
 {
     public class Address
     {

@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "9DzqP2uzjhj50Tg12m3mKqoy70g217+BsGLq/VJDX0qhzFsvAx4J2gkTfJxovPNfB1IOo2TGVXzBYFMgk5XtOA==",
+  "dgSpecHash": "LXTD89dT6M3Hk8IotBglWBOkyW8717xMU6iyL+L/6d3o2Fc0o4Gy9NQQf2ztCIYn1NiyTr1vu0LxqVwq+vo/7w==",
   "success": true,
   "projectFilePath": "C:\\Projects\\OrderPizza\\OrderPizza\\OrderPizza.API\\OrderPizza.API.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\marci\\.nuget\\packages\\automapper\\10.0.0\\automapper.10.0.0.nupkg.sha512",
+    "C:\\Users\\marci\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.0.1\\automapper.extensions.microsoft.dependencyinjection.8.0.1.nupkg.sha512",
+    "C:\\Users\\marci\\.nuget\\packages\\fluentvalidation\\9.2.0\\fluentvalidation.9.2.0.nupkg.sha512",
     "C:\\Users\\marci\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\3.1.7\\microsoft.aspnetcore.jsonpatch.3.1.7.nupkg.sha512",
     "C:\\Users\\marci\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\3.1.7\\microsoft.aspnetcore.mvc.newtonsoftjson.3.1.7.nupkg.sha512",
     "C:\\Users\\marci\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
@@ -41,6 +44,7 @@
     "C:\\Users\\marci\\.nuget\\packages\\system.componentmodel.annotations\\4.7.0\\system.componentmodel.annotations.4.7.0.nupkg.sha512",
     "C:\\Users\\marci\\.nuget\\packages\\system.diagnostics.diagnosticsource\\4.7.1\\system.diagnostics.diagnosticsource.4.7.1.nupkg.sha512",
     "C:\\Users\\marci\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
+    "C:\\Users\\marci\\.nuget\\packages\\system.reflection.emit\\4.7.0\\system.reflection.emit.4.7.0.nupkg.sha512",
     "C:\\Users\\marci\\.nuget\\packages\\system.text.json\\4.7.1\\system.text.json.4.7.1.nupkg.sha512"
   ],
   "logs": []

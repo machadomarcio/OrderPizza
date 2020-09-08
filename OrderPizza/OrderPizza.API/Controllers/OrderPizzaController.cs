@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Linq;
+using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using OrderPizza.Data.Repositories;
 using OrderPizza.Domain.Models;
@@ -16,9 +14,12 @@ namespace OrderPizza.API.Controllers
     {
         private readonly IRepository _repository;
 
-        public OrderPizzaController(IRepository repository)
+        private readonly IMapper _mapper;
+
+        public OrderPizzaController(IRepository repository, IMapper mapper)
         {
             _repository = repository;
+            _mapper = mapper;
         }
 
         // GET: api/<OrderPizzaController>
@@ -43,6 +44,25 @@ namespace OrderPizza.API.Controllers
         [HttpPost]
         public IActionResult Post(Order order)
         {
+            if (order.CustomerId == null || order.CustomerId == 0)
+            {
+                _repository.Add(order.Customer);
+                _repository.SaveChanges();
+                order.CustomerId = order.Customer.Id;
+            }
+
+            var validator = new OrderValidator();
+
+            var validRes = validator.Validate(order);
+            if (!validRes.IsValid)
+            {
+                return BadRequest($"Não foi possível cadastrar o pedido. Erro: {validRes.Errors.FirstOrDefault()}");
+            }
+
+            order.CalculateOrder();
+
+            order = _mapper.Map<Order>(order);
+
             _repository.Add(order);
 
             if (_repository.SaveChanges())
