@@ -5,7 +5,11 @@ Utilizando .Net Core 3.1 EntityFramework 3.1
 
 Utilizado Documentação no swagger.
 
-criado uma API para receber os pedidos feitos a partir do site da pizzaria que atenda aos requisitos abaixo:
+Teste unitários e de integração.
+
+--------------------------------------------------------
+
+Criado uma API para receber os pedidos feitos a partir do site da pizzaria que atenda aos requisitos abaixo:
 
 • Todo pedido precisa ter um identificador único
 
