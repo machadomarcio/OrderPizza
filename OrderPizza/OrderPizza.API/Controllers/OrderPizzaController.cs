@@ -55,7 +55,7 @@ namespace OrderPizza.API.Controllers
             var validRes = order.Validate();
             if (!validRes.IsValid)
             {
-                return BadRequest($"Não foi possível cadastrar o pedido. Erro: {string.Join(",", validRes.Errors)}");
+                return BadRequest($"Não foi possível cadastrar o pedido. Erro: {string.Join(", ", validRes.Errors)}");
             }
 
             order.CalculateOrder();

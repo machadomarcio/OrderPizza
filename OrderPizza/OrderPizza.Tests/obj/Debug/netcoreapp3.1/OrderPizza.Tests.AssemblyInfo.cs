@@ -11,6 +11,9 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("OrderPizza.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "C:\\Projects\\OrderPizza\\OrderPizza\\OrderPizza.API", "OrderPizza.API.csproj", "0")]
+[assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("OrderPizza.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "C:\\Projects\\OrderPizza\\OrderPizza\\OrderPizza.Data", "OrderPizza.Data.csproj", "0")]
+[assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("OrderPizza.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "C:\\Projects\\OrderPizza\\OrderPizza\\OrderPizza.Domain", "OrderPizza.Domain.csproj", "0")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("OrderPizza.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]

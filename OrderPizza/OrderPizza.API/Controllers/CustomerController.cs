@@ -50,6 +50,12 @@ namespace OrderPizza.API.Controllers
         [HttpPost]
         public IActionResult Post(Customer customer)
         {
+            var validRes = customer.Validate();
+            if (!validRes.IsValid)
+            {
+                return BadRequest($"Não foi possível cadastrar o cliente. Erro: {string.Join(", ", validRes.Errors)}");
+            }
+
             _repository.Add(customer);
 
             if (_repository.SaveChanges())
