@@ -61,8 +61,6 @@ C:\Projects\OrderPizza\OrderPizza\OrderPizza.API\bin\Debug\netcoreapp3.1\OrderPi
 C:\Projects\OrderPizza\OrderPizza\OrderPizza.API\obj\Debug\netcoreapp3.1\OrderPizza.API.csprojAssemblyReference.cache
 C:\Projects\OrderPizza\OrderPizza\OrderPizza.API\obj\Debug\netcoreapp3.1\OrderPizza.API.AssemblyInfoInputs.cache
 C:\Projects\OrderPizza\OrderPizza\OrderPizza.API\obj\Debug\netcoreapp3.1\OrderPizza.API.AssemblyInfo.cs
-C:\Projects\OrderPizza\OrderPizza\OrderPizza.API\obj\Debug\netcoreapp3.1\OrderPizza.API.csproj.CoreCompileInputs.cache
-C:\Projects\OrderPizza\OrderPizza\OrderPizza.API\obj\Debug\netcoreapp3.1\OrderPizza.API.MvcApplicationPartsAssemblyInfo.cache
 C:\Projects\OrderPizza\OrderPizza\OrderPizza.API\obj\Debug\netcoreapp3.1\OrderPizza.API.RazorTargetAssemblyInfo.cache
 C:\Projects\OrderPizza\OrderPizza\OrderPizza.API\obj\Debug\netcoreapp3.1\OrderPizza.API.csproj.CopyComplete
 C:\Projects\OrderPizza\OrderPizza\OrderPizza.API\obj\Debug\netcoreapp3.1\staticwebassets\OrderPizza.API.StaticWebAssets.Manifest.cache
@@ -70,3 +68,10 @@ C:\Projects\OrderPizza\OrderPizza\OrderPizza.API\obj\Debug\netcoreapp3.1\staticw
 C:\Projects\OrderPizza\OrderPizza\OrderPizza.API\obj\Debug\netcoreapp3.1\OrderPizza.API.dll
 C:\Projects\OrderPizza\OrderPizza\OrderPizza.API\obj\Debug\netcoreapp3.1\OrderPizza.API.pdb
 C:\Projects\OrderPizza\OrderPizza\OrderPizza.API\obj\Debug\netcoreapp3.1\OrderPizza.API.genruntimeconfig.cache
+C:\Projects\OrderPizza\OrderPizza\OrderPizza.API\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+C:\Projects\OrderPizza\OrderPizza\OrderPizza.API\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+C:\Projects\OrderPizza\OrderPizza\OrderPizza.API\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Projects\OrderPizza\OrderPizza\OrderPizza.API\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Projects\OrderPizza\OrderPizza\OrderPizza.API\obj\Debug\netcoreapp3.1\OrderPizza.API.csproj.CoreCompileInputs.cache
+C:\Projects\OrderPizza\OrderPizza\OrderPizza.API\obj\Debug\netcoreapp3.1\OrderPizza.API.MvcApplicationPartsAssemblyInfo.cs
+C:\Projects\OrderPizza\OrderPizza\OrderPizza.API\obj\Debug\netcoreapp3.1\OrderPizza.API.MvcApplicationPartsAssemblyInfo.cache
