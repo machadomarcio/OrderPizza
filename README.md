@@ -8,6 +8,7 @@ Utilizado Documentação no swagger.
 criado uma API para receber os pedidos feitos a partir do site da pizzaria que atenda aos requisitos abaixo:
 
 • Todo pedido precisa ter um identificador único
+
 • Um pedido pode ter no mínimo uma pizza e no máximo 10.
 • Cada pizza pode ter até dois sabores, os sabores disponíveis são:
 3 Queijos (R$ 50), Frango com requeijão (R$ 59.99), Mussarela (R$ 42.50), Calabresa (R$ 42.50), Pepperoni (R$ 55), Portuguesa (R$ 45), Veggie (R$ 59.99)
