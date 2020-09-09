@@ -9,6 +9,8 @@ Teste unitários e de integração.
 
 --------------------------------------------------------
 
+Você acabou de ser contratado como desenvolvedor sênior da Hungry Pizza. Esta é uma pizzaria muito famosa no bairro, seus donos sempre foram muito reticentes quando o assunto é a venda online, mas diante das atuais circunstâncias eles tiveram de reconsiderar.
+
 Criado uma API para receber os pedidos feitos a partir do site da pizzaria que atenda aos requisitos abaixo:
 
 • Todo pedido precisa ter um identificador único
